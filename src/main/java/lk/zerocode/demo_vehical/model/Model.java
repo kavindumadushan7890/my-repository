@@ -21,7 +21,7 @@ public class Model {
     @JoinColumn(name = "brand_id" , nullable = false)
     private Brand brand;
 
-    @ManyToOne
-    @JoinColumn(name = "type_id" , nullable = false)
-    private Type type;
+//    @ManyToOne
+//    @JoinColumn(name = "type_id" , nullable = false)
+//    private Type type;
 }

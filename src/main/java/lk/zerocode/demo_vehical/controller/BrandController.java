@@ -1,11 +1,10 @@
 package lk.zerocode.demo_vehical.controller;
 
 import lk.zerocode.demo_vehical.controller.request.AddBrandRequest;
+import lk.zerocode.demo_vehical.model.Brand;
 import lk.zerocode.demo_vehical.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class BrandController {
@@ -20,6 +19,14 @@ public class BrandController {
 //        System.out.println("Create brand ID " + addBrandRequest.getBrandId());
 //        System.out.println("Create brand Name " + addBrandRequest.getBrandName());
         brandService.create(addBrandRequest);
+
+    }
+
+    @GetMapping(value = "/brands/{brand-id}")
+    public void getBrand(@PathVariable("brand-id") Long brandId){
+
+        brandService.findById(brandId);
+
 
 
     }
