@@ -15,8 +15,7 @@ public class BrandServiceImpl implements BrandService{
 
     @Override
     public void create(AddBrandRequest addBrandRequest) {
-
-        System.out.println("Create brand ");
+        
         System.out.println("Create brand ID " + addBrandRequest.getBrandId());
         System.out.println("Create brand Name " + addBrandRequest.getBrandName());
 
